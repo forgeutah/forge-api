@@ -63,6 +63,12 @@
     },
     "twitter_handle": {
       "type": "string"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "mappedBy": "presenters"
     }
   }
 }
