@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,7 +28,16 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::person.person",
-      "inversedBy": "events"
+      "inversedBy": "event_presentations"
+    },
+    "meetup_event_uri": {
+      "type": "string"
+    },
+    "recording": {
+      "type": "string"
+    },
+    "slides_link": {
+      "type": "string"
     }
   }
 }

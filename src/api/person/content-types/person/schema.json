@@ -52,19 +52,19 @@
     "bio": {
       "type": "text"
     },
-    "meetups": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::meetup.meetup",
-      "mappedBy": "meetup_chair"
-    },
     "github_user": {
       "type": "string"
     },
     "twitter_handle": {
       "type": "string"
     },
-    "events": {
+    "meetups_chairing": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::meetup.meetup",
+      "mappedBy": "meetup_chair"
+    },
+    "event_presentations": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::event.event",

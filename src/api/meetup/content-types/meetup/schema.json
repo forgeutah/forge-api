@@ -44,7 +44,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::person.person",
-      "inversedBy": "meetups"
+      "inversedBy": "meetups_chairing"
     },
     "forge_sponsored": {
       "type": "boolean",
