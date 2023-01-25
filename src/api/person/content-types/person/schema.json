@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "Person",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "private": true,
+      "unique": true
+    },
+    "shirt_size": {
+      "type": "enumeration",
+      "enum": [
+        "XS",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "private": true
+    },
+    "slack_email": {
+      "type": "email",
+      "private": true
+    },
+    "display_name": {
+      "type": "string",
+      "required": true
+    },
+    "profile_pic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bio": {
+      "type": "text"
+    },
+    "meetups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::meetup.meetup",
+      "mappedBy": "meetup_chair"
+    },
+    "github_user": {
+      "type": "string"
+    },
+    "twitter_handle": {
+      "type": "string"
+    }
+  }
+}
