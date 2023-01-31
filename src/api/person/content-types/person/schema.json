@@ -22,6 +22,7 @@
       "type": "enumeration",
       "enum": [
         "XS",
+        "S",
         "M",
         "L",
         "XL",
@@ -69,6 +70,18 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "presenters"
+    },
+    "events_attended": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "mappedBy": "attendees"
+    },
+    "slack_id": {
+      "type": "string"
+    },
+    "meetup_id": {
+      "type": "string"
     }
   }
 }
