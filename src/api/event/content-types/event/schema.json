@@ -53,6 +53,12 @@
     },
     "end_time": {
       "type": "time"
+    },
+    "hosts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "hosted_events"
     }
   }
 }
