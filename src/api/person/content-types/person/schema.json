@@ -88,6 +88,12 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "hosts"
+    },
+    "stacks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::stack.stack",
+      "mappedBy": "people"
     }
   }
 }
